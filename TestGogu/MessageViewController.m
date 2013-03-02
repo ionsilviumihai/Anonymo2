@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  MessageViewController.m
 //  TestGogu
 //
 //  Created by Meeshoo on 3/2/13.
 //  Copyright (c) 2013 Meeshoo. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MessageViewController.h"
 
-@interface ViewController ()
+@interface MessageViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MessageViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning

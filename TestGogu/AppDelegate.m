@@ -7,18 +7,32 @@
 //
 
 #import "AppDelegate.h"
-
-#import "ViewController.h"
+#import "MapViewController.h"
+#import "MessageViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
+
+    MapViewController *mapVC = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
+    
+    [mapVC setTitle:@"Map"];
+    
+    [mapVC setTabBarItem:[[UITabBarItem alloc] initWithTabBarSystemItem:
+                          UITabBarSystemItemSearch tag:0]];
+    
+    MessageViewController *messageVC = [[MessageViewController alloc] initWithNibName:@"MessageViewController" bundle:nil];
+    [messageVC setTitle:@"Messages"];
+    
+    [messageVC setTabBarItem:[[UITabBarItem alloc] initWithTabBarSystemItem:
+                          UITabBarSystemItemDownloads tag:0]];
+    
+    self.tabController = [[UITabBarController alloc] init];
+    [self.tabController setViewControllers:[NSArray arrayWithObjects:mapVC,  messageVC, nil]];
+
+    self.window.rootViewController = self.tabController;    [self.window makeKeyAndVisible];
     return YES;
 }
 
