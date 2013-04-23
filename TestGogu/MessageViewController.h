@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MessageViewController : UIViewController
+@interface MessageViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) NSMutableArray *date;
+
+@property (weak, nonatomic) IBOutlet UITableView *table;
+
+@property (strong, nonatomic) UISegmentedControl *chooseAllOrSome;
+@property (strong , nonatomic) NSMutableArray *mesajeSelectate;
 
 @end

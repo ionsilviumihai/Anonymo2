@@ -1,0 +1,34 @@
+//
+//  MessagesCustomTableCell.h
+//  TestGogu
+//
+//  Created by Cristian Olteanu on 4/20/13.
+//  Copyright (c) 2013 Meeshoo. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@protocol commentCustomCellDelegate <NSObject>
+
+-(void)presentNewComment: (NSString *)idMesaj;
+
+@end
+
+@interface MessagesCustomTableCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UILabel *messageLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *authorLabel;
+
+@property (nonatomic, strong) NSString* mesaj;
+@property (nonatomic, strong) NSString* details;
+@property (nonatomic, strong) NSString* idMesaj;
+
+@property (strong, nonatomic) id<commentCustomCellDelegate> delegate;
+
+- (IBAction)likeButton:(id)sender;
+- (IBAction)dislikeButton:(id)sender;
+- (IBAction)shareButton:(id)sender;
+- (IBAction)writeComment:(id)sender;
+
+@end
