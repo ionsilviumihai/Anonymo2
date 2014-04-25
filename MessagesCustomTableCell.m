@@ -8,6 +8,8 @@
 
 #import "MessagesCustomTableCell.h"
 #import "NewCommentViewController.h"
+#import "AppDelegate.h"
+#import "httpRequests.h"
 
 @implementation MessagesCustomTableCell
 
@@ -17,7 +19,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Initialization code
+        NSLog(@"a intrat in style");
     }
     return self;
 }
@@ -35,8 +37,27 @@
 //    UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:newCommVC];
 //    [self presentViewController:navC animated:YES completion:nil];
     [self.delegate presentNewComment:idMesaj];
-    
 }
+
+- (IBAction)clipButtonPushed:(id)sender {
+    [self.delegate showPhoto];
+}
+
+- (IBAction)likeButton:(id)sender
+{
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    NSString *UserID = appDelegate.idUser;
+
+    [self.delegate upVotePressedwithMessageID:self.idMesaj UserID:UserID];
+}
+- (IBAction)dislikeButton:(id)sender
+{
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    NSString *UserID = appDelegate.idUser;
+    
+    [self.delegate downVotePressedwithMessageID:self.idMesaj UserID:UserID];
+}
+
 
 
 @end
