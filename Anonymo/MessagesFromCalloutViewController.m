@@ -12,6 +12,8 @@
 #import "viewMessageTableViewController.h"
 #import "MBProgressHUD.h"
 
+#import "CustomCellBackground.h"
+
 @interface MessagesFromCalloutViewController ()
 
 @end
@@ -87,6 +89,17 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AllMessagesCustomTableCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
+    
+    //set color of cells
+    if (![cell.backgroundView isKindOfClass:[CustomCellBackground class]]) {
+        cell.backgroundView = [[CustomCellBackground alloc] init];
+    }
+    if (![cell.selectedBackgroundView isKindOfClass:[CustomCellBackground class]]) {
+        cell.selectedBackgroundView = [[CustomCellBackground alloc] init];
+    }
+    //end setting color of cells
+    
+    
     //mesaj
     cell.messageLabel.text = [[date objectAtIndex:indexPath.row] objectForKey:@"text"];
     //data

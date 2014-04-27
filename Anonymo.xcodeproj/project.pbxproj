@@ -95,6 +95,8 @@
 		7A9FC82916E26D4D00FC3461 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9FC82816E26D4D00FC3461 /* MapKit.framework */; };
 		7A9FC82B16E2710200FC3461 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9FC82A16E2710200FC3461 /* CoreLocation.framework */; };
 		7A9FC82E16E273C200FC3461 /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FC82D16E273C200FC3461 /* Annotation.m */; };
+		7AF9B4B5190D3730009BF9AE /* CustomCellBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9B4B4190D3730009BF9AE /* CustomCellBackground.m */; };
+		7AF9B4B8190D38FA009BF9AE /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9B4B7190D38FA009BF9AE /* Common.m */; };
 		7E9268941722DA9400C273F9 /* MessageCustomTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E9268931722DA9400C273F9 /* MessageCustomTableCell.xib */; };
 		7E9268971722DBF500C273F9 /* MessagesCustomTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9268961722DBF400C273F9 /* MessagesCustomTableCell.m */; };
 		7E9268A21722DF6400C273F9 /* viewMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9268A01722DF6300C273F9 /* viewMessageTableViewController.m */; };
@@ -228,6 +230,10 @@
 		7A9FC82A16E2710200FC3461 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7A9FC82C16E273C200FC3461 /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
 		7A9FC82D16E273C200FC3461 /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
+		7AF9B4B3190D3730009BF9AE /* CustomCellBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellBackground.h; sourceTree = "<group>"; };
+		7AF9B4B4190D3730009BF9AE /* CustomCellBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellBackground.m; sourceTree = "<group>"; };
+		7AF9B4B6190D38FA009BF9AE /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		7AF9B4B7190D38FA009BF9AE /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 		7E9268931722DA9400C273F9 /* MessageCustomTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCustomTableCell.xib; sourceTree = "<group>"; };
 		7E9268951722DBF400C273F9 /* MessagesCustomTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessagesCustomTableCell.h; path = ../MessagesCustomTableCell.h; sourceTree = "<group>"; };
 		7E9268961722DBF400C273F9 /* MessagesCustomTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessagesCustomTableCell.m; path = ../MessagesCustomTableCell.m; sourceTree = "<group>"; };
@@ -636,6 +642,10 @@
 				43F5EE6E171EED25004BBB68 /* SettingsView */,
 				43F8FE80172470CE00D9C36E /* Custom Table Cells */,
 				439F9523174CE4E000CF3E71 /* Events */,
+				7AF9B4B3190D3730009BF9AE /* CustomCellBackground.h */,
+				7AF9B4B4190D3730009BF9AE /* CustomCellBackground.m */,
+				7AF9B4B6190D38FA009BF9AE /* Common.h */,
+				7AF9B4B7190D38FA009BF9AE /* Common.m */,
 			);
 			path = Anonymo;
 			sourceTree = "<group>";
@@ -807,6 +817,7 @@
 			files = (
 				7A9FC7C716E264F700FC3461 /* main.m in Sources */,
 				7A9FC7CB16E264F700FC3461 /* AppDelegate.m in Sources */,
+				7AF9B4B8190D38FA009BF9AE /* Common.m in Sources */,
 				7A9FC81D16E2686F00FC3461 /* MBProgressHUD.m in Sources */,
 				7A9FC82116E2688E00FC3461 /* MapViewController.m in Sources */,
 				7A9FC82616E268A600FC3461 /* MessageViewController.m in Sources */,
@@ -814,6 +825,7 @@
 				7A9F899D16E28516004E6BAF /* CommentsViewController.m in Sources */,
 				7A6ECE4716F5FCF9008F4E79 /* AFHTTPClient.m in Sources */,
 				7A6ECE4816F5FCF9008F4E79 /* AFHTTPRequestOperation.m in Sources */,
+				7AF9B4B5190D3730009BF9AE /* CustomCellBackground.m in Sources */,
 				7A6ECE4916F5FCF9008F4E79 /* AFImageRequestOperation.m in Sources */,
 				7A6ECE4A16F5FCF9008F4E79 /* AFJSONRequestOperation.m in Sources */,
 				7A6ECE4B16F5FCF9008F4E79 /* AFNetworkActivityIndicatorManager.m in Sources */,

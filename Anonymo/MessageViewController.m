@@ -13,6 +13,8 @@
 #import "AppDelegate.h"
 #import "viewMessageTableViewController.h"
 
+#import "CustomCellBackground.h"
+
 @interface MessageViewController ()
 
 @end
@@ -78,6 +80,17 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AllMessagesCustomTableCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
+    
+    
+    //set color of cells
+    if (![cell.backgroundView isKindOfClass:[CustomCellBackground class]]) {
+        cell.backgroundView = [[CustomCellBackground alloc] init];
+    }
+    if (![cell.selectedBackgroundView isKindOfClass:[CustomCellBackground class]]) {
+        cell.selectedBackgroundView = [[CustomCellBackground alloc] init];
+    }
+    //end setting color of cells
+
     cell.messageLabel.text = [[mesajeSelectate objectAtIndex:indexPath.row] objectForKey:@"text"];
     [cell.messageLabel sizeToFit];
     // = [UIImage imageNamed:[thumbnails objectAtIndex:indexPath.row]];
